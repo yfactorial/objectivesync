@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		35C67B510F2FAB38005FF6CE /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C67B500F2FAB38005FF6CE /* libsqlite3.0.dylib */; };
+		35C67BD30F2FB728005FF6CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67BCB0F2FB728005FF6CE /* main.m */; };
+		35C67BD50F2FB728005FF6CE /* NoteListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67BCE0F2FB728005FF6CE /* NoteListController.m */; };
+		35C67BD60F2FB728005FF6CE /* objectivesyncAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67BD10F2FB728005FF6CE /* objectivesyncAppDelegate.m */; };
+		35C67BEF0F2FB824005FF6CE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C67BEE0F2FB824005FF6CE /* MainWindow.xib */; };
+		35C67C0C0F2FB8D3005FF6CE /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C0B0F2FB8D3005FF6CE /* Note.m */; };
+		35C67C2E0F2FBB45005FF6CE /* NSData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C1B0F2FBB45005FF6CE /* NSData-SQLitePersistence.m */; };
+		35C67C2F0F2FBB45005FF6CE /* NSDate-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C1D0F2FBB45005FF6CE /* NSDate-SQLitePersistence.m */; };
+		35C67C300F2FBB45005FF6CE /* NSMutableData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C1F0F2FBB45005FF6CE /* NSMutableData-SQLitePersistence.m */; };
+		35C67C310F2FBB45005FF6CE /* NSNumber-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C210F2FBB45005FF6CE /* NSNumber-SQLitePersistence.m */; };
+		35C67C320F2FBB45005FF6CE /* NSObject-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C230F2FBB45005FF6CE /* NSObject-SQLitePersistence.m */; };
+		35C67C330F2FBB45005FF6CE /* NSString-SQLiteColumnName.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C250F2FBB45005FF6CE /* NSString-SQLiteColumnName.m */; };
+		35C67C340F2FBB45005FF6CE /* NSString-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C270F2FBB45005FF6CE /* NSString-SQLitePersistence.m */; };
+		35C67C350F2FBB45005FF6CE /* NSString-UppercaseFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C290F2FBB45005FF6CE /* NSString-UppercaseFirst.m */; };
+		35C67C360F2FBB45005FF6CE /* SQLiteInstanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C2B0F2FBB45005FF6CE /* SQLiteInstanceManager.m */; };
+		35C67C370F2FBB45005FF6CE /* SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C2D0F2FBB45005FF6CE /* SQLitePersistentObject.m */; };
+		35C67C610F2FC063005FF6CE /* NoteEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C67C600F2FC063005FF6CE /* NoteEdit.xib */; };
+		35C67C680F2FC0F5005FF6CE /* NoteEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C670F2FC0F5005FF6CE /* NoteEditController.m */; };
+		35C67CD60F2FC5E6005FF6CE /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CC70F2FC5E6005FF6CE /* Connection.m */; };
+		35C67CD70F2FC5E6005FF6CE /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CC90F2FC5E6005FF6CE /* ConnectionDelegate.m */; };
+		35C67CD80F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CCB0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m */; };
+		35C67CD90F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CCD0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m */; };
+		35C67CDA0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CCF0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m */; };
+		35C67CDB0F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CD10F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m */; };
+		35C67CDC0F2FC5E6005FF6CE /* ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CD30F2FC5E6005FF6CE /* ObjectiveResource.m */; };
+		35C67CDD0F2FC5E6005FF6CE /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CD50F2FC5E6005FF6CE /* Response.m */; };
+		35C67D480F2FCFD3005FF6CE /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D140F2FCFD3005FF6CE /* NSString+InflectionSupport.m */; };
+		35C67D490F2FCFD3005FF6CE /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D160F2FCFD3005FF6CE /* NSData+Additions.m */; };
+		35C67D4A0F2FCFD3005FF6CE /* NSObject+PropertySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D180F2FCFD3005FF6CE /* NSObject+PropertySupport.m */; };
+		35C67D4B0F2FCFD3005FF6CE /* NSString+GSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D1A0F2FCFD3005FF6CE /* NSString+GSub.m */; };
+		35C67D4C0F2FCFD3005FF6CE /* ObjectiveResourceDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D1C0F2FCFD3005FF6CE /* ObjectiveResourceDateFormatter.m */; };
+		35C67D4D0F2FCFD3005FF6CE /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D210F2FCFD3005FF6CE /* NSObject+SBJSON.m */; };
+		35C67D4E0F2FCFD3005FF6CE /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D230F2FCFD3005FF6CE /* NSString+SBJSON.m */; };
+		35C67D4F0F2FCFD3005FF6CE /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D250F2FCFD3005FF6CE /* SBJSON.m */; };
+		35C67D500F2FCFD3005FF6CE /* NSDictionary+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D2B0F2FCFD3005FF6CE /* NSDictionary+JSONSerializableSupport.m */; };
+		35C67D510F2FCFD3005FF6CE /* NSObject+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D2D0F2FCFD3005FF6CE /* NSObject+JSONSerializableSupport.m */; };
+		35C67D520F2FCFD3005FF6CE /* NSDate+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D2F0F2FCFD3005FF6CE /* NSDate+Serialize.m */; };
+		35C67D530F2FCFD3005FF6CE /* NSDictionary+KeyTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D310F2FCFD3005FF6CE /* NSDictionary+KeyTranslation.m */; };
+		35C67D540F2FCFD3005FF6CE /* NSObject+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D330F2FCFD3005FF6CE /* NSObject+Serialize.m */; };
+		35C67D550F2FCFD3005FF6CE /* NSString+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D350F2FCFD3005FF6CE /* NSString+Serialize.m */; };
+		35C67D560F2FCFD3005FF6CE /* FromXMLElementDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D390F2FCFD3005FF6CE /* FromXMLElementDelegate.m */; };
+		35C67D570F2FCFD3005FF6CE /* NSArray+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D3B0F2FCFD3005FF6CE /* NSArray+XMLSerializableSupport.m */; };
+		35C67D580F2FCFD3005FF6CE /* NSDate+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D3D0F2FCFD3005FF6CE /* NSDate+XMLSerializableSupport.m */; };
+		35C67D590F2FCFD3005FF6CE /* NSDictionary+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D3F0F2FCFD3005FF6CE /* NSDictionary+XMLSerializableSupport.m */; };
+		35C67D5A0F2FCFD3005FF6CE /* NSNull+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D410F2FCFD3005FF6CE /* NSNull+XMLSerializableSupport.m */; };
+		35C67D5B0F2FCFD3005FF6CE /* NSObject+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D430F2FCFD3005FF6CE /* NSObject+XMLSerializableSupport.m */; };
+		35C67D5C0F2FCFD3005FF6CE /* NSString+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D450F2FCFD3005FF6CE /* NSString+XMLSerializableSupport.m */; };
+		35C67D690F3087EE005FF6CE /* OSYDataChangedDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D680F3087EE005FF6CE /* OSYDataChangedDelegate.m */; };
+		35C67DB00F308CA0005FF6CE /* OSYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67DAF0F308CA0005FF6CE /* OSYLog.m */; };
+		35C67DC10F308FE1005FF6CE /* OSYService.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67DC00F308FE1005FF6CE /* OSYService.m */; };
+		35C67E150F30B555005FF6CE /* OSYObjectiveResourceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67E140F30B555005FF6CE /* OSYObjectiveResourceProxy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* objectivesync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objectivesync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		35C67B500F2FAB38005FF6CE /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		35C67BCB0F2FB728005FF6CE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35C67BCD0F2FB728005FF6CE /* NoteListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteListController.h; sourceTree = "<group>"; };
+		35C67BCE0F2FB728005FF6CE /* NoteListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteListController.m; sourceTree = "<group>"; };
+		35C67BD00F2FB728005FF6CE /* objectivesyncAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objectivesyncAppDelegate.h; sourceTree = "<group>"; };
+		35C67BD10F2FB728005FF6CE /* objectivesyncAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = objectivesyncAppDelegate.m; sourceTree = "<group>"; };
+		35C67BE40F2FB7E7005FF6CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		35C67BEE0F2FB824005FF6CE /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		35C67BF10F2FB854005FF6CE /* objectivesync_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectivesync_Prefix.pch; path = ../objectivesync_Prefix.pch; sourceTree = "<group>"; };
+		35C67C0A0F2FB8D3005FF6CE /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		35C67C0B0F2FB8D3005FF6CE /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		35C67C1A0F2FBB45005FF6CE /* NSData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-SQLitePersistence.h"; sourceTree = "<group>"; };
+		35C67C1B0F2FBB45005FF6CE /* NSData-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-SQLitePersistence.m"; sourceTree = "<group>"; };
+		35C67C1C0F2FBB45005FF6CE /* NSDate-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-SQLitePersistence.h"; sourceTree = "<group>"; };
+		35C67C1D0F2FBB45005FF6CE /* NSDate-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate-SQLitePersistence.m"; sourceTree = "<group>"; };
+		35C67C1E0F2FBB45005FF6CE /* NSMutableData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData-SQLitePersistence.h"; sourceTree = "<group>"; };
+		35C67C1F0F2FBB45005FF6CE /* NSMutableData-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData-SQLitePersistence.m"; sourceTree = "<group>"; };
+		35C67C200F2FBB45005FF6CE /* NSNumber-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-SQLitePersistence.h"; sourceTree = "<group>"; };
+		35C67C210F2FBB45005FF6CE /* NSNumber-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber-SQLitePersistence.m"; sourceTree = "<group>"; };
+		35C67C220F2FBB45005FF6CE /* NSObject-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-SQLitePersistence.h"; sourceTree = "<group>"; };
+		35C67C230F2FBB45005FF6CE /* NSObject-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-SQLitePersistence.m"; sourceTree = "<group>"; };
+		35C67C240F2FBB45005FF6CE /* NSString-SQLiteColumnName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-SQLiteColumnName.h"; sourceTree = "<group>"; };
+		35C67C250F2FBB45005FF6CE /* NSString-SQLiteColumnName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-SQLiteColumnName.m"; sourceTree = "<group>"; };
+		35C67C260F2FBB45005FF6CE /* NSString-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-SQLitePersistence.h"; sourceTree = "<group>"; };
+		35C67C270F2FBB45005FF6CE /* NSString-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-SQLitePersistence.m"; sourceTree = "<group>"; };
+		35C67C280F2FBB45005FF6CE /* NSString-UppercaseFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-UppercaseFirst.h"; sourceTree = "<group>"; };
+		35C67C290F2FBB45005FF6CE /* NSString-UppercaseFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-UppercaseFirst.m"; sourceTree = "<group>"; };
+		35C67C2A0F2FBB45005FF6CE /* SQLiteInstanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteInstanceManager.h; sourceTree = "<group>"; };
+		35C67C2B0F2FBB45005FF6CE /* SQLiteInstanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteInstanceManager.m; sourceTree = "<group>"; };
+		35C67C2C0F2FBB45005FF6CE /* SQLitePersistentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLitePersistentObject.h; sourceTree = "<group>"; };
+		35C67C2D0F2FBB45005FF6CE /* SQLitePersistentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLitePersistentObject.m; sourceTree = "<group>"; };
+		35C67C600F2FC063005FF6CE /* NoteEdit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteEdit.xib; sourceTree = "<group>"; };
+		35C67C660F2FC0F5005FF6CE /* NoteEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteEditController.h; sourceTree = "<group>"; };
+		35C67C670F2FC0F5005FF6CE /* NoteEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteEditController.m; sourceTree = "<group>"; };
+		35C67CC60F2FC5E6005FF6CE /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		35C67CC70F2FC5E6005FF6CE /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
+		35C67CC80F2FC5E6005FF6CE /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDelegate.h; sourceTree = "<group>"; };
+		35C67CC90F2FC5E6005FF6CE /* ConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionDelegate.m; sourceTree = "<group>"; };
+		35C67CCA0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+Error.h"; sourceTree = "<group>"; };
+		35C67CCB0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+Error.m"; sourceTree = "<group>"; };
+		35C67CCC0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+ResponseType.h"; sourceTree = "<group>"; };
+		35C67CCD0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+ResponseType.m"; sourceTree = "<group>"; };
+		35C67CCE0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectiveResource+JSONSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67CCF0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectiveResource+JSONSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67CD00F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectiveResource+XMLSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67CD10F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectiveResource+XMLSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67CD20F2FC5E6005FF6CE /* ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveResource.h; sourceTree = "<group>"; };
+		35C67CD30F2FC5E6005FF6CE /* ObjectiveResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveResource.m; sourceTree = "<group>"; };
+		35C67CD40F2FC5E6005FF6CE /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		35C67CD50F2FC5E6005FF6CE /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		35C67D110F2FCFD3005FF6CE /* CoreSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSupport.h; sourceTree = "<group>"; };
+		35C67D130F2FCFD3005FF6CE /* NSString+InflectionSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InflectionSupport.h"; sourceTree = "<group>"; };
+		35C67D140F2FCFD3005FF6CE /* NSString+InflectionSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InflectionSupport.m"; sourceTree = "<group>"; };
+		35C67D150F2FCFD3005FF6CE /* NSData+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Additions.h"; sourceTree = "<group>"; };
+		35C67D160F2FCFD3005FF6CE /* NSData+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Additions.m"; sourceTree = "<group>"; };
+		35C67D170F2FCFD3005FF6CE /* NSObject+PropertySupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertySupport.h"; sourceTree = "<group>"; };
+		35C67D180F2FCFD3005FF6CE /* NSObject+PropertySupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertySupport.m"; sourceTree = "<group>"; };
+		35C67D190F2FCFD3005FF6CE /* NSString+GSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GSub.h"; sourceTree = "<group>"; };
+		35C67D1A0F2FCFD3005FF6CE /* NSString+GSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GSub.m"; sourceTree = "<group>"; };
+		35C67D1B0F2FCFD3005FF6CE /* ObjectiveResourceDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveResourceDateFormatter.h; sourceTree = "<group>"; };
+		35C67D1C0F2FCFD3005FF6CE /* ObjectiveResourceDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveResourceDateFormatter.m; sourceTree = "<group>"; };
+		35C67D1D0F2FCFD3005FF6CE /* ObjectiveSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveSupport.h; sourceTree = "<group>"; };
+		35C67D1F0F2FCFD3005FF6CE /* JSONFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONFramework.h; sourceTree = "<group>"; };
+		35C67D200F2FCFD3005FF6CE /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		35C67D210F2FCFD3005FF6CE /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		35C67D220F2FCFD3005FF6CE /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		35C67D230F2FCFD3005FF6CE /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		35C67D240F2FCFD3005FF6CE /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		35C67D250F2FCFD3005FF6CE /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		35C67D280F2FCFD3005FF6CE /* JSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSerializable.h; sourceTree = "<group>"; };
+		35C67D290F2FCFD3005FF6CE /* JSONSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSerializableSupport.h; sourceTree = "<group>"; };
+		35C67D2A0F2FCFD3005FF6CE /* NSDictionary+JSONSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67D2B0F2FCFD3005FF6CE /* NSDictionary+JSONSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67D2C0F2FCFD3005FF6CE /* NSObject+JSONSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSONSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67D2D0F2FCFD3005FF6CE /* NSObject+JSONSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSONSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67D2E0F2FCFD3005FF6CE /* NSDate+Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Serialize.h"; sourceTree = "<group>"; };
+		35C67D2F0F2FCFD3005FF6CE /* NSDate+Serialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Serialize.m"; sourceTree = "<group>"; };
+		35C67D300F2FCFD3005FF6CE /* NSDictionary+KeyTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KeyTranslation.h"; sourceTree = "<group>"; };
+		35C67D310F2FCFD3005FF6CE /* NSDictionary+KeyTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KeyTranslation.m"; sourceTree = "<group>"; };
+		35C67D320F2FCFD3005FF6CE /* NSObject+Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Serialize.h"; sourceTree = "<group>"; };
+		35C67D330F2FCFD3005FF6CE /* NSObject+Serialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Serialize.m"; sourceTree = "<group>"; };
+		35C67D340F2FCFD3005FF6CE /* NSString+Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Serialize.h"; sourceTree = "<group>"; };
+		35C67D350F2FCFD3005FF6CE /* NSString+Serialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Serialize.m"; sourceTree = "<group>"; };
+		35C67D360F2FCFD3005FF6CE /* Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serialize.h; sourceTree = "<group>"; };
+		35C67D380F2FCFD3005FF6CE /* FromXMLElementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FromXMLElementDelegate.h; sourceTree = "<group>"; };
+		35C67D390F2FCFD3005FF6CE /* FromXMLElementDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FromXMLElementDelegate.m; sourceTree = "<group>"; };
+		35C67D3A0F2FCFD3005FF6CE /* NSArray+XMLSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+XMLSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67D3B0F2FCFD3005FF6CE /* NSArray+XMLSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XMLSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67D3C0F2FCFD3005FF6CE /* NSDate+XMLSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XMLSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67D3D0F2FCFD3005FF6CE /* NSDate+XMLSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XMLSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67D3E0F2FCFD3005FF6CE /* NSDictionary+XMLSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+XMLSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67D3F0F2FCFD3005FF6CE /* NSDictionary+XMLSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XMLSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67D400F2FCFD3005FF6CE /* NSNull+XMLSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+XMLSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67D410F2FCFD3005FF6CE /* NSNull+XMLSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+XMLSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67D420F2FCFD3005FF6CE /* NSObject+XMLSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XMLSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67D430F2FCFD3005FF6CE /* NSObject+XMLSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XMLSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67D440F2FCFD3005FF6CE /* NSString+XMLSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLSerializableSupport.h"; sourceTree = "<group>"; };
+		35C67D450F2FCFD3005FF6CE /* NSString+XMLSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLSerializableSupport.m"; sourceTree = "<group>"; };
+		35C67D460F2FCFD3005FF6CE /* XMLSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSerializable.h; sourceTree = "<group>"; };
+		35C67D470F2FCFD3005FF6CE /* XMLSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSerializableSupport.h; sourceTree = "<group>"; };
+		35C67D5E0F2FD2C7005FF6CE /* ORCDataChangedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCDataChangedDelegate.h; sourceTree = "<group>"; };
+		35C67D670F3087EE005FF6CE /* OSYDataChangedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSYDataChangedDelegate.h; sourceTree = "<group>"; };
+		35C67D680F3087EE005FF6CE /* OSYDataChangedDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYDataChangedDelegate.m; sourceTree = "<group>"; };
+		35C67DAE0F308CA0005FF6CE /* OSYLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSYLog.h; sourceTree = "<group>"; };
+		35C67DAF0F308CA0005FF6CE /* OSYLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYLog.m; sourceTree = "<group>"; };
+		35C67DBF0F308FE1005FF6CE /* OSYService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSYService.h; sourceTree = "<group>"; };
+		35C67DC00F308FE1005FF6CE /* OSYService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYService.m; sourceTree = "<group>"; };
+		35C67E130F30B555005FF6CE /* OSYObjectiveResourceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSYObjectiveResourceProxy.h; sourceTree = "<group>"; };
+		35C67E140F30B555005FF6CE /* OSYObjectiveResourceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYObjectiveResourceProxy.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				35C67B510F2FAB38005FF6CE /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* objectivesync.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				35C67CDE0F2FC629005FF6CE /* lib */,
+				35C67C0E0F2FB970005FF6CE /* external_libs */,
+				35C67BC90F2FB728005FF6CE /* NotesExampleApp */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35C67B500F2FAB38005FF6CE /* libsqlite3.0.dylib */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35C67BC90F2FB728005FF6CE /* NotesExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				35C67BF50F2FB889005FF6CE /* Classes */,
+				35C67BF60F2FB893005FF6CE /* Resources */,
+				35C67BE40F2FB7E7005FF6CE /* Info.plist */,
+				35C67BCB0F2FB728005FF6CE /* main.m */,
+				35C67BD00F2FB728005FF6CE /* objectivesyncAppDelegate.h */,
+				35C67BD10F2FB728005FF6CE /* objectivesyncAppDelegate.m */,
+				35C67BF10F2FB854005FF6CE /* objectivesync_Prefix.pch */,
+			);
+			path = NotesExampleApp;
+			sourceTree = "<group>";
+		};
+		35C67BF50F2FB889005FF6CE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				35C67C0A0F2FB8D3005FF6CE /* Note.h */,
+				35C67C0B0F2FB8D3005FF6CE /* Note.m */,
+				35C67C660F2FC0F5005FF6CE /* NoteEditController.h */,
+				35C67C670F2FC0F5005FF6CE /* NoteEditController.m */,
+				35C67BCD0F2FB728005FF6CE /* NoteListController.h */,
+				35C67BCE0F2FB728005FF6CE /* NoteListController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		35C67BF60F2FB893005FF6CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35C67BEE0F2FB824005FF6CE /* MainWindow.xib */,
+				35C67C600F2FC063005FF6CE /* NoteEdit.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		35C67C0E0F2FB970005FF6CE /* external_libs */ = {
+			isa = PBXGroup;
+			children = (
+				35C67D0F0F2FCFD3005FF6CE /* ObjectiveSupport */,
+				35C67CC50F2FC5E6005FF6CE /* ObjectiveResource */,
+				35C67C190F2FBB45005FF6CE /* ObjectiveRecord */,
+			);
+			name = external_libs;
+			sourceTree = "<group>";
+		};
+		35C67C190F2FBB45005FF6CE /* ObjectiveRecord */ = {
+			isa = PBXGroup;
+			children = (
+				35C67C1A0F2FBB45005FF6CE /* NSData-SQLitePersistence.h */,
+				35C67C1B0F2FBB45005FF6CE /* NSData-SQLitePersistence.m */,
+				35C67C1C0F2FBB45005FF6CE /* NSDate-SQLitePersistence.h */,
+				35C67C1D0F2FBB45005FF6CE /* NSDate-SQLitePersistence.m */,
+				35C67C1E0F2FBB45005FF6CE /* NSMutableData-SQLitePersistence.h */,
+				35C67C1F0F2FBB45005FF6CE /* NSMutableData-SQLitePersistence.m */,
+				35C67C200F2FBB45005FF6CE /* NSNumber-SQLitePersistence.h */,
+				35C67C210F2FBB45005FF6CE /* NSNumber-SQLitePersistence.m */,
+				35C67C220F2FBB45005FF6CE /* NSObject-SQLitePersistence.h */,
+				35C67C230F2FBB45005FF6CE /* NSObject-SQLitePersistence.m */,
+				35C67C240F2FBB45005FF6CE /* NSString-SQLiteColumnName.h */,
+				35C67C250F2FBB45005FF6CE /* NSString-SQLiteColumnName.m */,
+				35C67C260F2FBB45005FF6CE /* NSString-SQLitePersistence.h */,
+				35C67C270F2FBB45005FF6CE /* NSString-SQLitePersistence.m */,
+				35C67C280F2FBB45005FF6CE /* NSString-UppercaseFirst.h */,
+				35C67C290F2FBB45005FF6CE /* NSString-UppercaseFirst.m */,
+				35C67C2A0F2FBB45005FF6CE /* SQLiteInstanceManager.h */,
+				35C67C2B0F2FBB45005FF6CE /* SQLiteInstanceManager.m */,
+				35C67C2C0F2FBB45005FF6CE /* SQLitePersistentObject.h */,
+				35C67C2D0F2FBB45005FF6CE /* SQLitePersistentObject.m */,
+				35C67D5E0F2FD2C7005FF6CE /* ORCDataChangedDelegate.h */,
+			);
+			name = ObjectiveRecord;
+			path = external_libs/ObjectiveRecord;
+			sourceTree = "<group>";
+		};
+		35C67CC50F2FC5E6005FF6CE /* ObjectiveResource */ = {
+			isa = PBXGroup;
+			children = (
+				35C67CC60F2FC5E6005FF6CE /* Connection.h */,
+				35C67CC70F2FC5E6005FF6CE /* Connection.m */,
+				35C67CC80F2FC5E6005FF6CE /* ConnectionDelegate.h */,
+				35C67CC90F2FC5E6005FF6CE /* ConnectionDelegate.m */,
+				35C67CCA0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.h */,
+				35C67CCB0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m */,
+				35C67CCC0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.h */,
+				35C67CCD0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m */,
+				35C67CCE0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.h */,
+				35C67CCF0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m */,
+				35C67CD00F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.h */,
+				35C67CD10F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m */,
+				35C67CD20F2FC5E6005FF6CE /* ObjectiveResource.h */,
+				35C67CD30F2FC5E6005FF6CE /* ObjectiveResource.m */,
+				35C67CD40F2FC5E6005FF6CE /* Response.h */,
+				35C67CD50F2FC5E6005FF6CE /* Response.m */,
+			);
+			name = ObjectiveResource;
+			path = external_libs/ObjectiveResource;
+			sourceTree = "<group>";
+		};
+		35C67CDE0F2FC629005FF6CE /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				35C67E130F30B555005FF6CE /* OSYObjectiveResourceProxy.h */,
+				35C67E140F30B555005FF6CE /* OSYObjectiveResourceProxy.m */,
+				35C67D670F3087EE005FF6CE /* OSYDataChangedDelegate.h */,
+				35C67D680F3087EE005FF6CE /* OSYDataChangedDelegate.m */,
+				35C67DAE0F308CA0005FF6CE /* OSYLog.h */,
+				35C67DAF0F308CA0005FF6CE /* OSYLog.m */,
+				35C67DBF0F308FE1005FF6CE /* OSYService.h */,
+				35C67DC00F308FE1005FF6CE /* OSYService.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		35C67D0F0F2FCFD3005FF6CE /* ObjectiveSupport */ = {
+			isa = PBXGroup;
+			children = (
+				35C67D100F2FCFD3005FF6CE /* Core */,
+				35C67D1E0F2FCFD3005FF6CE /* json-framework */,
+				35C67D260F2FCFD3005FF6CE /* Serialization */,
+			);
+			name = ObjectiveSupport;
+			path = external_libs/ObjectiveSupport;
+			sourceTree = "<group>";
+		};
+		35C67D100F2FCFD3005FF6CE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				35C67D110F2FCFD3005FF6CE /* CoreSupport.h */,
+				35C67D120F2FCFD3005FF6CE /* Inflections */,
+				35C67D150F2FCFD3005FF6CE /* NSData+Additions.h */,
+				35C67D160F2FCFD3005FF6CE /* NSData+Additions.m */,
+				35C67D170F2FCFD3005FF6CE /* NSObject+PropertySupport.h */,
+				35C67D180F2FCFD3005FF6CE /* NSObject+PropertySupport.m */,
+				35C67D190F2FCFD3005FF6CE /* NSString+GSub.h */,
+				35C67D1A0F2FCFD3005FF6CE /* NSString+GSub.m */,
+				35C67D1B0F2FCFD3005FF6CE /* ObjectiveResourceDateFormatter.h */,
+				35C67D1C0F2FCFD3005FF6CE /* ObjectiveResourceDateFormatter.m */,
+				35C67D1D0F2FCFD3005FF6CE /* ObjectiveSupport.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		35C67D120F2FCFD3005FF6CE /* Inflections */ = {
+			isa = PBXGroup;
+			children = (
+				35C67D130F2FCFD3005FF6CE /* NSString+InflectionSupport.h */,
+				35C67D140F2FCFD3005FF6CE /* NSString+InflectionSupport.m */,
+			);
+			path = Inflections;
+			sourceTree = "<group>";
+		};
+		35C67D1E0F2FCFD3005FF6CE /* json-framework */ = {
+			isa = PBXGroup;
+			children = (
+				35C67D1F0F2FCFD3005FF6CE /* JSONFramework.h */,
+				35C67D200F2FCFD3005FF6CE /* NSObject+SBJSON.h */,
+				35C67D210F2FCFD3005FF6CE /* NSObject+SBJSON.m */,
+				35C67D220F2FCFD3005FF6CE /* NSString+SBJSON.h */,
+				35C67D230F2FCFD3005FF6CE /* NSString+SBJSON.m */,
+				35C67D240F2FCFD3005FF6CE /* SBJSON.h */,
+				35C67D250F2FCFD3005FF6CE /* SBJSON.m */,
+			);
+			path = "json-framework";
+			sourceTree = "<group>";
+		};
+		35C67D260F2FCFD3005FF6CE /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				35C67D270F2FCFD3005FF6CE /* JSON */,
+				35C67D2E0F2FCFD3005FF6CE /* NSDate+Serialize.h */,
+				35C67D2F0F2FCFD3005FF6CE /* NSDate+Serialize.m */,
+				35C67D300F2FCFD3005FF6CE /* NSDictionary+KeyTranslation.h */,
+				35C67D310F2FCFD3005FF6CE /* NSDictionary+KeyTranslation.m */,
+				35C67D320F2FCFD3005FF6CE /* NSObject+Serialize.h */,
+				35C67D330F2FCFD3005FF6CE /* NSObject+Serialize.m */,
+				35C67D340F2FCFD3005FF6CE /* NSString+Serialize.h */,
+				35C67D350F2FCFD3005FF6CE /* NSString+Serialize.m */,
+				35C67D360F2FCFD3005FF6CE /* Serialize.h */,
+				35C67D370F2FCFD3005FF6CE /* XML */,
+			);
+			path = Serialization;
+			sourceTree = "<group>";
+		};
+		35C67D270F2FCFD3005FF6CE /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				35C67D280F2FCFD3005FF6CE /* JSONSerializable.h */,
+				35C67D290F2FCFD3005FF6CE /* JSONSerializableSupport.h */,
+				35C67D2A0F2FCFD3005FF6CE /* NSDictionary+JSONSerializableSupport.h */,
+				35C67D2B0F2FCFD3005FF6CE /* NSDictionary+JSONSerializableSupport.m */,
+				35C67D2C0F2FCFD3005FF6CE /* NSObject+JSONSerializableSupport.h */,
+				35C67D2D0F2FCFD3005FF6CE /* NSObject+JSONSerializableSupport.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		35C67D370F2FCFD3005FF6CE /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				35C67D380F2FCFD3005FF6CE /* FromXMLElementDelegate.h */,
+				35C67D390F2FCFD3005FF6CE /* FromXMLElementDelegate.m */,
+				35C67D3A0F2FCFD3005FF6CE /* NSArray+XMLSerializableSupport.h */,
+				35C67D3B0F2FCFD3005FF6CE /* NSArray+XMLSerializableSupport.m */,
+				35C67D3C0F2FCFD3005FF6CE /* NSDate+XMLSerializableSupport.h */,
+				35C67D3D0F2FCFD3005FF6CE /* NSDate+XMLSerializableSupport.m */,
+				35C67D3E0F2FCFD3005FF6CE /* NSDictionary+XMLSerializableSupport.h */,
+				35C67D3F0F2FCFD3005FF6CE /* NSDictionary+XMLSerializableSupport.m */,
+				35C67D400F2FCFD3005FF6CE /* NSNull+XMLSerializableSupport.h */,
+				35C67D410F2FCFD3005FF6CE /* NSNull+XMLSerializableSupport.m */,
+				35C67D420F2FCFD3005FF6CE /* NSObject+XMLSerializableSupport.h */,
+				35C67D430F2FCFD3005FF6CE /* NSObject+XMLSerializableSupport.m */,
+				35C67D440F2FCFD3005FF6CE /* NSString+XMLSerializableSupport.h */,
+				35C67D450F2FCFD3005FF6CE /* NSString+XMLSerializableSupport.m */,
+				35C67D460F2FCFD3005FF6CE /* XMLSerializable.h */,
+				35C67D470F2FCFD3005FF6CE /* XMLSerializableSupport.h */,
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* objectivesync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "objectivesync" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = objectivesync;
+			productName = objectivesync;
+			productReference = 1D6058910D05DD3D006BFB54 /* objectivesync.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "objectivesync" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* objectivesync */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35C67BEF0F2FB824005FF6CE /* MainWindow.xib in Resources */,
+				35C67C610F2FC063005FF6CE /* NoteEdit.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35C67BD30F2FB728005FF6CE /* main.m in Sources */,
+				35C67BD50F2FB728005FF6CE /* NoteListController.m in Sources */,
+				35C67BD60F2FB728005FF6CE /* objectivesyncAppDelegate.m in Sources */,
+				35C67C0C0F2FB8D3005FF6CE /* Note.m in Sources */,
+				35C67C2E0F2FBB45005FF6CE /* NSData-SQLitePersistence.m in Sources */,
+				35C67C2F0F2FBB45005FF6CE /* NSDate-SQLitePersistence.m in Sources */,
+				35C67C300F2FBB45005FF6CE /* NSMutableData-SQLitePersistence.m in Sources */,
+				35C67C310F2FBB45005FF6CE /* NSNumber-SQLitePersistence.m in Sources */,
+				35C67C320F2FBB45005FF6CE /* NSObject-SQLitePersistence.m in Sources */,
+				35C67C330F2FBB45005FF6CE /* NSString-SQLiteColumnName.m in Sources */,
+				35C67C340F2FBB45005FF6CE /* NSString-SQLitePersistence.m in Sources */,
+				35C67C350F2FBB45005FF6CE /* NSString-UppercaseFirst.m in Sources */,
+				35C67C360F2FBB45005FF6CE /* SQLiteInstanceManager.m in Sources */,
+				35C67C370F2FBB45005FF6CE /* SQLitePersistentObject.m in Sources */,
+				35C67C680F2FC0F5005FF6CE /* NoteEditController.m in Sources */,
+				35C67CD60F2FC5E6005FF6CE /* Connection.m in Sources */,
+				35C67CD70F2FC5E6005FF6CE /* ConnectionDelegate.m in Sources */,
+				35C67CD80F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m in Sources */,
+				35C67CD90F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m in Sources */,
+				35C67CDA0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m in Sources */,
+				35C67CDB0F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m in Sources */,
+				35C67CDC0F2FC5E6005FF6CE /* ObjectiveResource.m in Sources */,
+				35C67CDD0F2FC5E6005FF6CE /* Response.m in Sources */,
+				35C67D480F2FCFD3005FF6CE /* NSString+InflectionSupport.m in Sources */,
+				35C67D490F2FCFD3005FF6CE /* NSData+Additions.m in Sources */,
+				35C67D4A0F2FCFD3005FF6CE /* NSObject+PropertySupport.m in Sources */,
+				35C67D4B0F2FCFD3005FF6CE /* NSString+GSub.m in Sources */,
+				35C67D4C0F2FCFD3005FF6CE /* ObjectiveResourceDateFormatter.m in Sources */,
+				35C67D4D0F2FCFD3005FF6CE /* NSObject+SBJSON.m in Sources */,
+				35C67D4E0F2FCFD3005FF6CE /* NSString+SBJSON.m in Sources */,
+				35C67D4F0F2FCFD3005FF6CE /* SBJSON.m in Sources */,
+				35C67D500F2FCFD3005FF6CE /* NSDictionary+JSONSerializableSupport.m in Sources */,
+				35C67D510F2FCFD3005FF6CE /* NSObject+JSONSerializableSupport.m in Sources */,
+				35C67D520F2FCFD3005FF6CE /* NSDate+Serialize.m in Sources */,
+				35C67D530F2FCFD3005FF6CE /* NSDictionary+KeyTranslation.m in Sources */,
+				35C67D540F2FCFD3005FF6CE /* NSObject+Serialize.m in Sources */,
+				35C67D550F2FCFD3005FF6CE /* NSString+Serialize.m in Sources */,
+				35C67D560F2FCFD3005FF6CE /* FromXMLElementDelegate.m in Sources */,
+				35C67D570F2FCFD3005FF6CE /* NSArray+XMLSerializableSupport.m in Sources */,
+				35C67D580F2FCFD3005FF6CE /* NSDate+XMLSerializableSupport.m in Sources */,
+				35C67D590F2FCFD3005FF6CE /* NSDictionary+XMLSerializableSupport.m in Sources */,
+				35C67D5A0F2FCFD3005FF6CE /* NSNull+XMLSerializableSupport.m in Sources */,
+				35C67D5B0F2FCFD3005FF6CE /* NSObject+XMLSerializableSupport.m in Sources */,
+				35C67D5C0F2FCFD3005FF6CE /* NSString+XMLSerializableSupport.m in Sources */,
+				35C67D690F3087EE005FF6CE /* OSYDataChangedDelegate.m in Sources */,
+				35C67DB00F308CA0005FF6CE /* OSYLog.m in Sources */,
+				35C67DC10F308FE1005FF6CE /* OSYService.m in Sources */,
+				35C67E150F30B555005FF6CE /* OSYObjectiveResourceProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = objectivesync_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = objectivesync;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = objectivesync_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = objectivesync;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "objectivesync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "objectivesync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
