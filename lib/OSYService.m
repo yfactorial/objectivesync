@@ -10,8 +10,7 @@
 #import "OSYDataChangedDelegate.h"
 #import "SQLitePersistentObject.h"
 #import "OSYLog.h"
-#import "OSYObjectiveResourceProxy.h"
-#import "SQLitePersistentObject.h"
+#import "NSObject+ObjectiveResource.h"
 
 static OSYService *__instance;
 
@@ -34,8 +33,7 @@ static OSYService *__instance;
 	for (OSYLog *log in changed) {
 		Class cls = [[NSBundle mainBundle] classNamed:log.loggedClassName];
 		id obj = [cls findByPK:log.loggedPk];
-		OSYObjectiveResourceProxy *oResProxy = [OSYObjectiveResourceProxy proxyFor:obj];
-		[oResProxy save];
+		[obj saveORS];
 		NSLog(@"found: %@:%d, %@",log.loggedClassName, log.loggedPk, log.loggedAction);
 	}
 }

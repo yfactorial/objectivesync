@@ -86,12 +86,9 @@
 	return [self toXMLElementAs:rootName excludingInArray:[NSArray array] withTranslations:keyTranslations];
 }
 
-/**
- * Override in complex objects to account for nested properties
- **/
 - (NSString *)toXMLElementAs:(NSString *)rootName excludingInArray:(NSArray *)exclusions
 			withTranslations:(NSDictionary *)keyTranslations {
-	return [[self class] buildXMLElementAs:rootName	withValue:self];	
+	return [[self properties] toXMLElementAs:rootName excludingInArray:exclusions withTranslations:keyTranslations];
 }
 
 # pragma mark XML Serialization convenience methods

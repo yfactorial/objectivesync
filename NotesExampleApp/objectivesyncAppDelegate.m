@@ -8,6 +8,7 @@
 
 #import "objectivesyncAppDelegate.h"
 #import "OSYService.h"
+#import "ObjectiveResource.h"
 
 @implementation objectivesyncAppDelegate
 
@@ -15,7 +16,7 @@
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
-
+	[ObjectiveResource setSite:@"http://localhost:3000/"];
 	[OSYService setup];
 	
     // Override point for customization after application launch

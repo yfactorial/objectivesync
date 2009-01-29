@@ -32,8 +32,6 @@
 		35C67CD70F2FC5E6005FF6CE /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CC90F2FC5E6005FF6CE /* ConnectionDelegate.m */; };
 		35C67CD80F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CCB0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m */; };
 		35C67CD90F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CCD0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m */; };
-		35C67CDA0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CCF0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m */; };
-		35C67CDB0F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CD10F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m */; };
 		35C67CDC0F2FC5E6005FF6CE /* ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CD30F2FC5E6005FF6CE /* ObjectiveResource.m */; };
 		35C67CDD0F2FC5E6005FF6CE /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CD50F2FC5E6005FF6CE /* Response.m */; };
 		35C67D480F2FCFD3005FF6CE /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D140F2FCFD3005FF6CE /* NSString+InflectionSupport.m */; };
@@ -60,7 +58,7 @@
 		35C67D690F3087EE005FF6CE /* OSYDataChangedDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D680F3087EE005FF6CE /* OSYDataChangedDelegate.m */; };
 		35C67DB00F308CA0005FF6CE /* OSYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67DAF0F308CA0005FF6CE /* OSYLog.m */; };
 		35C67DC10F308FE1005FF6CE /* OSYService.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67DC00F308FE1005FF6CE /* OSYService.m */; };
-		35C67E150F30B555005FF6CE /* OSYObjectiveResourceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67E140F30B555005FF6CE /* OSYObjectiveResourceProxy.m */; };
+		35C67FA50F31DCD7005FF6CE /* NSObject+ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67FA40F31DCD7005FF6CE /* NSObject+ObjectiveResource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,10 +108,6 @@
 		35C67CCB0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+Error.m"; sourceTree = "<group>"; };
 		35C67CCC0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+ResponseType.h"; sourceTree = "<group>"; };
 		35C67CCD0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+ResponseType.m"; sourceTree = "<group>"; };
-		35C67CCE0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectiveResource+JSONSerializableSupport.h"; sourceTree = "<group>"; };
-		35C67CCF0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectiveResource+JSONSerializableSupport.m"; sourceTree = "<group>"; };
-		35C67CD00F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectiveResource+XMLSerializableSupport.h"; sourceTree = "<group>"; };
-		35C67CD10F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectiveResource+XMLSerializableSupport.m"; sourceTree = "<group>"; };
 		35C67CD20F2FC5E6005FF6CE /* ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveResource.h; sourceTree = "<group>"; };
 		35C67CD30F2FC5E6005FF6CE /* ObjectiveResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveResource.m; sourceTree = "<group>"; };
 		35C67CD40F2FC5E6005FF6CE /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
@@ -175,8 +169,8 @@
 		35C67DAF0F308CA0005FF6CE /* OSYLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYLog.m; sourceTree = "<group>"; };
 		35C67DBF0F308FE1005FF6CE /* OSYService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSYService.h; sourceTree = "<group>"; };
 		35C67DC00F308FE1005FF6CE /* OSYService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYService.m; sourceTree = "<group>"; };
-		35C67E130F30B555005FF6CE /* OSYObjectiveResourceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSYObjectiveResourceProxy.h; sourceTree = "<group>"; };
-		35C67E140F30B555005FF6CE /* OSYObjectiveResourceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYObjectiveResourceProxy.m; sourceTree = "<group>"; };
+		35C67FA30F31DCD7005FF6CE /* NSObject+ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectiveResource.h"; sourceTree = "<group>"; };
+		35C67FA40F31DCD7005FF6CE /* NSObject+ObjectiveResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectiveResource.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,10 +305,8 @@
 				35C67CCB0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m */,
 				35C67CCC0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.h */,
 				35C67CCD0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m */,
-				35C67CCE0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.h */,
-				35C67CCF0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m */,
-				35C67CD00F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.h */,
-				35C67CD10F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m */,
+				35C67FA30F31DCD7005FF6CE /* NSObject+ObjectiveResource.h */,
+				35C67FA40F31DCD7005FF6CE /* NSObject+ObjectiveResource.m */,
 				35C67CD20F2FC5E6005FF6CE /* ObjectiveResource.h */,
 				35C67CD30F2FC5E6005FF6CE /* ObjectiveResource.m */,
 				35C67CD40F2FC5E6005FF6CE /* Response.h */,
@@ -327,8 +319,6 @@
 		35C67CDE0F2FC629005FF6CE /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				35C67E130F30B555005FF6CE /* OSYObjectiveResourceProxy.h */,
-				35C67E140F30B555005FF6CE /* OSYObjectiveResourceProxy.m */,
 				35C67D670F3087EE005FF6CE /* OSYDataChangedDelegate.h */,
 				35C67D680F3087EE005FF6CE /* OSYDataChangedDelegate.m */,
 				35C67DAE0F308CA0005FF6CE /* OSYLog.h */,
@@ -518,8 +508,6 @@
 				35C67CD70F2FC5E6005FF6CE /* ConnectionDelegate.m in Sources */,
 				35C67CD80F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m in Sources */,
 				35C67CD90F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m in Sources */,
-				35C67CDA0F2FC5E6005FF6CE /* ObjectiveResource+JSONSerializableSupport.m in Sources */,
-				35C67CDB0F2FC5E6005FF6CE /* ObjectiveResource+XMLSerializableSupport.m in Sources */,
 				35C67CDC0F2FC5E6005FF6CE /* ObjectiveResource.m in Sources */,
 				35C67CDD0F2FC5E6005FF6CE /* Response.m in Sources */,
 				35C67D480F2FCFD3005FF6CE /* NSString+InflectionSupport.m in Sources */,
@@ -546,7 +534,7 @@
 				35C67D690F3087EE005FF6CE /* OSYDataChangedDelegate.m in Sources */,
 				35C67DB00F308CA0005FF6CE /* OSYLog.m in Sources */,
 				35C67DC10F308FE1005FF6CE /* OSYService.m in Sources */,
-				35C67E150F30B555005FF6CE /* OSYObjectiveResourceProxy.m in Sources */,
+				35C67FA50F31DCD7005FF6CE /* NSObject+ObjectiveResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
