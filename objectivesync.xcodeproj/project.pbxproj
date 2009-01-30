@@ -28,12 +28,6 @@
 		35C67C370F2FBB45005FF6CE /* SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C2D0F2FBB45005FF6CE /* SQLitePersistentObject.m */; };
 		35C67C610F2FC063005FF6CE /* NoteEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C67C600F2FC063005FF6CE /* NoteEdit.xib */; };
 		35C67C680F2FC0F5005FF6CE /* NoteEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67C670F2FC0F5005FF6CE /* NoteEditController.m */; };
-		35C67CD60F2FC5E6005FF6CE /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CC70F2FC5E6005FF6CE /* Connection.m */; };
-		35C67CD70F2FC5E6005FF6CE /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CC90F2FC5E6005FF6CE /* ConnectionDelegate.m */; };
-		35C67CD80F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CCB0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m */; };
-		35C67CD90F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CCD0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m */; };
-		35C67CDC0F2FC5E6005FF6CE /* ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CD30F2FC5E6005FF6CE /* ObjectiveResource.m */; };
-		35C67CDD0F2FC5E6005FF6CE /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67CD50F2FC5E6005FF6CE /* Response.m */; };
 		35C67D480F2FCFD3005FF6CE /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D140F2FCFD3005FF6CE /* NSString+InflectionSupport.m */; };
 		35C67D490F2FCFD3005FF6CE /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D160F2FCFD3005FF6CE /* NSData+Additions.m */; };
 		35C67D4A0F2FCFD3005FF6CE /* NSObject+PropertySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D180F2FCFD3005FF6CE /* NSObject+PropertySupport.m */; };
@@ -58,7 +52,6 @@
 		35C67D690F3087EE005FF6CE /* OSYDataChangedDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67D680F3087EE005FF6CE /* OSYDataChangedDelegate.m */; };
 		35C67DB00F308CA0005FF6CE /* OSYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67DAF0F308CA0005FF6CE /* OSYLog.m */; };
 		35C67DC10F308FE1005FF6CE /* OSYService.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67DC00F308FE1005FF6CE /* OSYService.m */; };
-		35C67FA50F31DCD7005FF6CE /* NSObject+ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67FA40F31DCD7005FF6CE /* NSObject+ObjectiveResource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,18 +93,6 @@
 		35C67C600F2FC063005FF6CE /* NoteEdit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteEdit.xib; sourceTree = "<group>"; };
 		35C67C660F2FC0F5005FF6CE /* NoteEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteEditController.h; sourceTree = "<group>"; };
 		35C67C670F2FC0F5005FF6CE /* NoteEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteEditController.m; sourceTree = "<group>"; };
-		35C67CC60F2FC5E6005FF6CE /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
-		35C67CC70F2FC5E6005FF6CE /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
-		35C67CC80F2FC5E6005FF6CE /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDelegate.h; sourceTree = "<group>"; };
-		35C67CC90F2FC5E6005FF6CE /* ConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionDelegate.m; sourceTree = "<group>"; };
-		35C67CCA0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+Error.h"; sourceTree = "<group>"; };
-		35C67CCB0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+Error.m"; sourceTree = "<group>"; };
-		35C67CCC0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+ResponseType.h"; sourceTree = "<group>"; };
-		35C67CCD0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+ResponseType.m"; sourceTree = "<group>"; };
-		35C67CD20F2FC5E6005FF6CE /* ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveResource.h; sourceTree = "<group>"; };
-		35C67CD30F2FC5E6005FF6CE /* ObjectiveResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveResource.m; sourceTree = "<group>"; };
-		35C67CD40F2FC5E6005FF6CE /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
-		35C67CD50F2FC5E6005FF6CE /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
 		35C67D110F2FCFD3005FF6CE /* CoreSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSupport.h; sourceTree = "<group>"; };
 		35C67D130F2FCFD3005FF6CE /* NSString+InflectionSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InflectionSupport.h"; sourceTree = "<group>"; };
 		35C67D140F2FCFD3005FF6CE /* NSString+InflectionSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InflectionSupport.m"; sourceTree = "<group>"; };
@@ -169,8 +150,6 @@
 		35C67DAF0F308CA0005FF6CE /* OSYLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYLog.m; sourceTree = "<group>"; };
 		35C67DBF0F308FE1005FF6CE /* OSYService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSYService.h; sourceTree = "<group>"; };
 		35C67DC00F308FE1005FF6CE /* OSYService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYService.m; sourceTree = "<group>"; };
-		35C67FA30F31DCD7005FF6CE /* NSObject+ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectiveResource.h"; sourceTree = "<group>"; };
-		35C67FA40F31DCD7005FF6CE /* NSObject+ObjectiveResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectiveResource.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				35C67D0F0F2FCFD3005FF6CE /* ObjectiveSupport */,
-				35C67CC50F2FC5E6005FF6CE /* ObjectiveResource */,
 				35C67C190F2FBB45005FF6CE /* ObjectiveRecord */,
 			);
 			name = external_libs;
@@ -292,28 +270,6 @@
 			);
 			name = ObjectiveRecord;
 			path = external_libs/ObjectiveRecord;
-			sourceTree = "<group>";
-		};
-		35C67CC50F2FC5E6005FF6CE /* ObjectiveResource */ = {
-			isa = PBXGroup;
-			children = (
-				35C67CC60F2FC5E6005FF6CE /* Connection.h */,
-				35C67CC70F2FC5E6005FF6CE /* Connection.m */,
-				35C67CC80F2FC5E6005FF6CE /* ConnectionDelegate.h */,
-				35C67CC90F2FC5E6005FF6CE /* ConnectionDelegate.m */,
-				35C67CCA0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.h */,
-				35C67CCB0F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m */,
-				35C67CCC0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.h */,
-				35C67CCD0F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m */,
-				35C67FA30F31DCD7005FF6CE /* NSObject+ObjectiveResource.h */,
-				35C67FA40F31DCD7005FF6CE /* NSObject+ObjectiveResource.m */,
-				35C67CD20F2FC5E6005FF6CE /* ObjectiveResource.h */,
-				35C67CD30F2FC5E6005FF6CE /* ObjectiveResource.m */,
-				35C67CD40F2FC5E6005FF6CE /* Response.h */,
-				35C67CD50F2FC5E6005FF6CE /* Response.m */,
-			);
-			name = ObjectiveResource;
-			path = external_libs/ObjectiveResource;
 			sourceTree = "<group>";
 		};
 		35C67CDE0F2FC629005FF6CE /* lib */ = {
@@ -504,12 +460,6 @@
 				35C67C360F2FBB45005FF6CE /* SQLiteInstanceManager.m in Sources */,
 				35C67C370F2FBB45005FF6CE /* SQLitePersistentObject.m in Sources */,
 				35C67C680F2FC0F5005FF6CE /* NoteEditController.m in Sources */,
-				35C67CD60F2FC5E6005FF6CE /* Connection.m in Sources */,
-				35C67CD70F2FC5E6005FF6CE /* ConnectionDelegate.m in Sources */,
-				35C67CD80F2FC5E6005FF6CE /* NSHTTPURLResponse+Error.m in Sources */,
-				35C67CD90F2FC5E6005FF6CE /* NSMutableURLRequest+ResponseType.m in Sources */,
-				35C67CDC0F2FC5E6005FF6CE /* ObjectiveResource.m in Sources */,
-				35C67CDD0F2FC5E6005FF6CE /* Response.m in Sources */,
 				35C67D480F2FCFD3005FF6CE /* NSString+InflectionSupport.m in Sources */,
 				35C67D490F2FCFD3005FF6CE /* NSData+Additions.m in Sources */,
 				35C67D4A0F2FCFD3005FF6CE /* NSObject+PropertySupport.m in Sources */,
@@ -534,7 +484,6 @@
 				35C67D690F3087EE005FF6CE /* OSYDataChangedDelegate.m in Sources */,
 				35C67DB00F308CA0005FF6CE /* OSYLog.m in Sources */,
 				35C67DC10F308FE1005FF6CE /* OSYService.m in Sources */,
-				35C67FA50F31DCD7005FF6CE /* NSObject+ObjectiveResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
