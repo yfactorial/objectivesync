@@ -9,22 +9,38 @@
 #import "OSYLog.h"
 #import "ORCDataChangedDelegate.h"
 
+@interface OSYLog()
+
++(NSArray *)findByAction:(ORCActionTypes)action;
+
+@end
+
 
 @implementation OSYLog
 
-@synthesize loggedClassName, loggedPk, loggedAction, loggedAt;
+@synthesize loggedClassName, loggedPk, loggedAction, loggedAt, remoteId;
 
-+(NSArray *)newlyCreated {
-	NSString *query = [NSString stringWithFormat:@"WHERE logged_action = '%d'", CreatedAction];
-	return [self findByCriteria:query];;
++(NSArray *)findByAction:(ORCActionTypes)action {
+	return [self findByCriteria:[NSString stringWithFormat:@"WHERE logged_action=%d",action]];
 }
 
-+(void) logAction:(ORCActionTypes)action toDBWithClass:(Class)createdClass andPk:(int)createdPk {
++(NSArray *)newlyCreated {
+	return [self findByAction:CreatedAction];
+}
++(NSArray *)newlyDeleted {
+	return [self findByAction:DeletedAction];
+}
+
++(void) logAction:(ORCActionTypes)action toDBWithClass:(Class)loggedClass 
+	  andRemoteId:(NSString *)loggedRemoteId andPk:(int)loggedPk 
+
+{
 	OSYLog *log = [[[OSYLog alloc] init] autorelease];
 	log.loggedAction = action;
-	log.loggedClassName = [createdClass className];
-	log.loggedPk = createdPk;
+	log.loggedClassName = [loggedClass className];
+	log.loggedPk = loggedPk;
 	log.loggedAt = [NSDate date];
+	log.remoteId = loggedRemoteId;
 	[log save];
 }
 
@@ -34,6 +50,7 @@
 {
 	[loggedClassName release];
 	[loggedAt release];
+	[remoteId release];
 	[super dealloc];
 }
 

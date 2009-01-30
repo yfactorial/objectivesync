@@ -12,12 +12,11 @@
 
 @implementation objectivesyncAppDelegate
 
-@synthesize window, navigationController;
-
+@synthesize window, navigationController, noteListController;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
-	[OSYService setup];
+	[OSYService setupWithSyncDelegate:(id)noteListController];
 	
     // Override point for customization after application launch
 	[window addSubview:navigationController.view];
@@ -28,6 +27,7 @@
 - (void)dealloc {
     [window release];
 	[navigationController release];
+	[noteListController release];
     [super dealloc];
 }
 

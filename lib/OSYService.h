@@ -7,14 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OSYSyncDelegate.h"
 
 
 @interface OSYService : NSObject {
 
+	NSObject<OSYSyncDelegate> *delegate;
+	
 }
 
-+(void)setup;
+@property(nonatomic, retain) NSObject<OSYSyncDelegate> *delegate;
+
++(void)setupWithSyncDelegate:(NSObject<OSYSyncDelegate> *)delegate;
 +(OSYService *)instance;
+
 -(void)dataChanged;
 
 @end

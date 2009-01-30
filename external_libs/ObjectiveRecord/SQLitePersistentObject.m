@@ -23,6 +23,7 @@
 #import "NSString-UppercaseFirst.h"
 #import "NSObject+PropertySupport.h"
 #import "NSDate-SQLitePersistence.h"
+#import "ObjectiveResource.h"
 
 id findByMethodImp(id self, SEL _cmd, id value)
 {
@@ -240,7 +241,7 @@ static id<ORCDataChangedDelegate>__delegate;
 
 	[[SQLiteInstanceManager sharedManager] executeQuery:updateSQL substitutions:substitutions];
 	if (isNew) {
-		[__delegate objectOfClass:self.class withPk:pk was:CreatedAction];
+		[__delegate objectOfClass:self.class withPk:pk andRemoteId:nil was:CreatedAction];
 	}
 
 }
@@ -255,6 +256,7 @@ static id<ORCDataChangedDelegate>__delegate;
 	NSString *deleteQuery = [NSString stringWithFormat:@"DELETE FROM %@ WHERE pk = %d", [[self class] tableName], pk];
 		
 	[[SQLiteInstanceManager sharedManager] executeQuery:deleteQuery];
+	[__delegate objectOfClass:self.class withPk:pk andRemoteId:[self getORSId] was:DeletedAction];
 
 }
 #pragma mark -

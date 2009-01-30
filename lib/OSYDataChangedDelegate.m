@@ -12,9 +12,9 @@
 
 @implementation OSYDataChangedDelegate
 
-- (void) objectOfClass:(Class)cls withPk:(int)pk was:(ORCActionTypes)action {
+- (void) objectOfClass:(Class)cls withPk:(int)pk andRemoteId:(NSString *)remoteId was:(ORCActionTypes)action {
 	if (![[cls className] isEqualTo:@"OSYLog"]) {
-		[OSYLog logAction:action toDBWithClass:cls andPk:pk];
+		[OSYLog logAction:action toDBWithClass:cls andRemoteId:remoteId andPk:pk];
 		[[OSYService instance] dataChanged];
 	}
 }

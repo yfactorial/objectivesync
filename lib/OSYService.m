@@ -16,10 +16,13 @@ static OSYService *__instance;
 
 @implementation OSYService
 
-+(void)setup  {
+@synthesize delegate;
+
++(void)setupWithSyncDelegate:(NSObject<OSYSyncDelegate> *)delegate {
 	__instance = [[OSYService alloc] init];
-	OSYDataChangedDelegate *delegate = [[OSYDataChangedDelegate alloc] init];
-	[SQLitePersistentObject setDataChangedDelegate:delegate];
+	[__instance setDelegate:delegate];
+	OSYDataChangedDelegate *dataChanged = [[OSYDataChangedDelegate alloc] init];
+	[SQLitePersistentObject setDataChangedDelegate:dataChanged];
 }
 
 +(OSYService *)instance {
@@ -32,6 +35,15 @@ static OSYService *__instance;
 	//basic, sync immediately strategy
 	OSYSync *sync = [[[OSYSync alloc] init] autorelease];
 	[sync runSync];
+	[delegate syncCompleteWithSuccess:YES];
 }
+
+#pragma mark cleanup
+- (void) dealloc
+{
+	[delegate release];
+	[super dealloc];
+}
+
 
 @end

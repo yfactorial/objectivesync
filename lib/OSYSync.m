@@ -13,6 +13,7 @@
 @interface OSYSync()
 
 -(void)syncCreated;
+-(void)syncDeleted;
 
 @end
 
@@ -21,14 +22,28 @@
 
 -(void)runSync {
 	[self syncCreated];
+	[self syncDeleted];
 }
 
--(void) syncCreated {	
+-(void) syncCreated {
 	NSArray *created = [OSYLog newlyCreated];
 	for (OSYLog *log in created) {
 		Class cls = [[NSBundle mainBundle] classNamed:log.loggedClassName];
 		id obj = [cls findByPK:log.loggedPk];
 		if ([obj saveORS]) {
+			[obj save];
+			[log deleteObject];
+		}
+	}
+}
+
+-(void) syncDeleted {
+	NSArray *deleted = [OSYLog newlyDeleted];
+	for (OSYLog *log in deleted) {
+		Class cls = [[NSBundle mainBundle] classNamed:log.loggedClassName];
+		id obj = [[[cls alloc] init] autorelease];
+		[obj setORSId:log.remoteId];
+		if ([obj destroyORS]) {
 			[log deleteObject];
 		}
 	}

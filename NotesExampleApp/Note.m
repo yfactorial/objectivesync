@@ -10,12 +10,13 @@
 
 @implementation Note
 
-@synthesize noteText;
+@synthesize noteText, noteId;
 
 #pragma mark cleanup
 - (void) dealloc
 {
 	[noteText release];
+	[noteId release];
 	[super dealloc];
 }
 

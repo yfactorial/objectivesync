@@ -14,6 +14,6 @@ typedef enum {
 
 @protocol ORCDataChangedDelegate
 
-- (void) objectOfClass:(Class)cls withPk:(int)pk was:(ORCActionTypes)action;
-
+- (void) objectOfClass:(Class)cls withPk:(int)pk 
+		   andRemoteId:(NSString *)remoteId was:(ORCActionTypes)action;
 @end

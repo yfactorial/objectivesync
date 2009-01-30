@@ -12,9 +12,11 @@
 @interface Note : SQLitePersistentObject {
 
 	NSString *noteText;
+	NSString *noteId;
 	
 }
 
 @property(nonatomic, retain) NSString *noteText;
+@property(nonatomic, retain) NSString *noteId;
 
 @end

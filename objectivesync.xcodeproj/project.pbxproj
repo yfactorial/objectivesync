@@ -84,6 +84,7 @@
 		3584E1CD0F332FA0008E596B /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Response.m; path = external_libs/ObjectiveResource/Classes/lib/Response.m; sourceTree = "<group>"; };
 		3584E1E80F333532008E596B /* OSYSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSYSync.h; sourceTree = "<group>"; };
 		3584E1E90F333532008E596B /* OSYSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSYSync.m; sourceTree = "<group>"; };
+		3584E2E70F334A79008E596B /* OSYSyncDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSYSyncDelegate.h; sourceTree = "<group>"; };
 		35C67B500F2FAB38005FF6CE /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		35C67BCB0F2FB728005FF6CE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35C67BCD0F2FB728005FF6CE /* NoteListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteListController.h; sourceTree = "<group>"; };
@@ -331,6 +332,7 @@
 				35C67DC00F308FE1005FF6CE /* OSYService.m */,
 				3584E1E80F333532008E596B /* OSYSync.h */,
 				3584E1E90F333532008E596B /* OSYSync.m */,
+				3584E2E70F334A79008E596B /* OSYSyncDelegate.h */,
 			);
 			path = lib;
 			sourceTree = "<group>";

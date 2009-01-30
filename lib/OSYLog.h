@@ -15,6 +15,7 @@
 	int loggedPk;
 	int loggedAction;
 	NSDate *loggedAt;
+	NSString *remoteId;
 	
 }
 
@@ -22,11 +23,15 @@
 @property(nonatomic) int loggedPk;
 @property(nonatomic) int loggedAction;
 @property(nonatomic, retain) NSDate *loggedAt;
+@property(nonatomic, retain) NSString *remoteId;
 
-/*! log an object creation */
-+(void) logAction:(ORCActionTypes)action toDBWithClass:(Class)createdClass andPk:(int)createdPk;
+/*! log an object that was Created, Deleted or Updated */
++(void) logAction:(ORCActionTypes)action toDBWithClass:(Class)loggedClass 
+	  andRemoteId:(NSString *)loggedRemoteId andPk:(int)loggedPk;
 
-/*! findAll newly created objects that have not yet been uploaded */
+
+//finders
 +(NSArray *)newlyCreated;
++(NSArray *)newlyDeleted;
 
 @end

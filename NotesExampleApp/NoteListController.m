@@ -22,9 +22,20 @@
 	[self.navigationController pushViewController:editor animated:YES];
 }
 
+- (void) loadNotes {
+	self.notes = [NSMutableArray arrayWithArray:[Note findByCriteria:@""]];
+}
+
+#pragma mark OSYSyncDelegate methods
+- (void) syncCompleteWithSuccess:(BOOL)success {
+	if (success) {
+		[self loadNotes];
+	}
+}
+
 #pragma mark UIViewController methods
 - (void)viewDidLoad {
-	self.notes = [NSMutableArray arrayWithArray:[Note findByCriteria:@""]];
+	[self loadNotes];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -47,6 +58,21 @@
     }
 	cell.text = [[notes objectAtIndex:indexPath.row] noteText];
     return cell;
+}
+
+- (void)tableView:(UITableView *)aTableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+		[aTableView beginUpdates];
+		[aTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
+						  withRowAnimation:YES];		
+		Note *note = [notes objectAtIndex:indexPath.row];
+		[note deleteObject];
+		[notes removeObject:note];
+		[aTableView endUpdates];
+	}
+	
+	
 }
 
 #pragma mark cleanup
