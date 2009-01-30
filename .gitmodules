@@ -1,0 +1,3 @@
+[submodule "external_libs/ObjectiveResource"]
+	path = external_libs/ObjectiveResource
+	url = git://github.com/yfactorial/objectiveresource.git

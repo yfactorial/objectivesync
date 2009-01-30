@@ -16,7 +16,7 @@
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
-	[ObjectiveResource setSite:@"http://localhost:3000/"];
+	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
 	[OSYService setup];
 	
     // Override point for customization after application launch

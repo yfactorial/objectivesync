@@ -10,6 +10,13 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		3584E1CE0F332FA0008E596B /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E1C00F332FA0008E596B /* Connection.m */; };
+		3584E1CF0F332FA0008E596B /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E1C20F332FA0008E596B /* ConnectionDelegate.m */; };
+		3584E1D00F332FA0008E596B /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E1C40F332FA0008E596B /* NSHTTPURLResponse+Error.m */; };
+		3584E1D10F332FA0008E596B /* NSMutableURLRequest+ResponseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E1C60F332FA0008E596B /* NSMutableURLRequest+ResponseType.m */; };
+		3584E1D20F332FA0008E596B /* NSObject+ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E1C80F332FA0008E596B /* NSObject+ObjectiveResource.m */; };
+		3584E1D30F332FA0008E596B /* ObjectiveResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E1CB0F332FA0008E596B /* ObjectiveResourceConfig.m */; };
+		3584E1D40F332FA0008E596B /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E1CD0F332FA0008E596B /* Response.m */; };
 		35C67B510F2FAB38005FF6CE /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C67B500F2FAB38005FF6CE /* libsqlite3.0.dylib */; };
 		35C67BD30F2FB728005FF6CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67BCB0F2FB728005FF6CE /* main.m */; };
 		35C67BD50F2FB728005FF6CE /* NoteListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C67BCE0F2FB728005FF6CE /* NoteListController.m */; };
@@ -59,6 +66,21 @@
 		1D6058910D05DD3D006BFB54 /* objectivesync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objectivesync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3584E1BF0F332FA0008E596B /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = external_libs/ObjectiveResource/Classes/lib/Connection.h; sourceTree = "<group>"; };
+		3584E1C00F332FA0008E596B /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = external_libs/ObjectiveResource/Classes/lib/Connection.m; sourceTree = "<group>"; };
+		3584E1C10F332FA0008E596B /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionDelegate.h; path = external_libs/ObjectiveResource/Classes/lib/ConnectionDelegate.h; sourceTree = "<group>"; };
+		3584E1C20F332FA0008E596B /* ConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionDelegate.m; path = external_libs/ObjectiveResource/Classes/lib/ConnectionDelegate.m; sourceTree = "<group>"; };
+		3584E1C30F332FA0008E596B /* NSHTTPURLResponse+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSHTTPURLResponse+Error.h"; path = "external_libs/ObjectiveResource/Classes/lib/NSHTTPURLResponse+Error.h"; sourceTree = "<group>"; };
+		3584E1C40F332FA0008E596B /* NSHTTPURLResponse+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSHTTPURLResponse+Error.m"; path = "external_libs/ObjectiveResource/Classes/lib/NSHTTPURLResponse+Error.m"; sourceTree = "<group>"; };
+		3584E1C50F332FA0008E596B /* NSMutableURLRequest+ResponseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+ResponseType.h"; path = "external_libs/ObjectiveResource/Classes/lib/NSMutableURLRequest+ResponseType.h"; sourceTree = "<group>"; };
+		3584E1C60F332FA0008E596B /* NSMutableURLRequest+ResponseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+ResponseType.m"; path = "external_libs/ObjectiveResource/Classes/lib/NSMutableURLRequest+ResponseType.m"; sourceTree = "<group>"; };
+		3584E1C70F332FA0008E596B /* NSObject+ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ObjectiveResource.h"; path = "external_libs/ObjectiveResource/Classes/lib/NSObject+ObjectiveResource.h"; sourceTree = "<group>"; };
+		3584E1C80F332FA0008E596B /* NSObject+ObjectiveResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ObjectiveResource.m"; path = "external_libs/ObjectiveResource/Classes/lib/NSObject+ObjectiveResource.m"; sourceTree = "<group>"; };
+		3584E1C90F332FA0008E596B /* ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveResource.h; path = external_libs/ObjectiveResource/Classes/lib/ObjectiveResource.h; sourceTree = "<group>"; };
+		3584E1CA0F332FA0008E596B /* ObjectiveResourceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveResourceConfig.h; path = external_libs/ObjectiveResource/Classes/lib/ObjectiveResourceConfig.h; sourceTree = "<group>"; };
+		3584E1CB0F332FA0008E596B /* ObjectiveResourceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectiveResourceConfig.m; path = external_libs/ObjectiveResource/Classes/lib/ObjectiveResourceConfig.m; sourceTree = "<group>"; };
+		3584E1CC0F332FA0008E596B /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Response.h; path = external_libs/ObjectiveResource/Classes/lib/Response.h; sourceTree = "<group>"; };
+		3584E1CD0F332FA0008E596B /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Response.m; path = external_libs/ObjectiveResource/Classes/lib/Response.m; sourceTree = "<group>"; };
 		35C67B500F2FAB38005FF6CE /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		35C67BCB0F2FB728005FF6CE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35C67BCD0F2FB728005FF6CE /* NoteListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteListController.h; sourceTree = "<group>"; };
@@ -198,6 +220,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3584E1BE0F332F70008E596B /* ObjectiveResource */ = {
+			isa = PBXGroup;
+			children = (
+				3584E1BF0F332FA0008E596B /* Connection.h */,
+				3584E1C00F332FA0008E596B /* Connection.m */,
+				3584E1C10F332FA0008E596B /* ConnectionDelegate.h */,
+				3584E1C20F332FA0008E596B /* ConnectionDelegate.m */,
+				3584E1C30F332FA0008E596B /* NSHTTPURLResponse+Error.h */,
+				3584E1C40F332FA0008E596B /* NSHTTPURLResponse+Error.m */,
+				3584E1C50F332FA0008E596B /* NSMutableURLRequest+ResponseType.h */,
+				3584E1C60F332FA0008E596B /* NSMutableURLRequest+ResponseType.m */,
+				3584E1C70F332FA0008E596B /* NSObject+ObjectiveResource.h */,
+				3584E1C80F332FA0008E596B /* NSObject+ObjectiveResource.m */,
+				3584E1C90F332FA0008E596B /* ObjectiveResource.h */,
+				3584E1CA0F332FA0008E596B /* ObjectiveResourceConfig.h */,
+				3584E1CB0F332FA0008E596B /* ObjectiveResourceConfig.m */,
+				3584E1CC0F332FA0008E596B /* Response.h */,
+				3584E1CD0F332FA0008E596B /* Response.m */,
+			);
+			name = ObjectiveResource;
+			sourceTree = "<group>";
+		};
 		35C67BC90F2FB728005FF6CE /* NotesExampleApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +281,7 @@
 		35C67C0E0F2FB970005FF6CE /* external_libs */ = {
 			isa = PBXGroup;
 			children = (
+				3584E1BE0F332F70008E596B /* ObjectiveResource */,
 				35C67D0F0F2FCFD3005FF6CE /* ObjectiveSupport */,
 				35C67C190F2FBB45005FF6CE /* ObjectiveRecord */,
 			);
@@ -484,6 +529,13 @@
 				35C67D690F3087EE005FF6CE /* OSYDataChangedDelegate.m in Sources */,
 				35C67DB00F308CA0005FF6CE /* OSYLog.m in Sources */,
 				35C67DC10F308FE1005FF6CE /* OSYService.m in Sources */,
+				3584E1CE0F332FA0008E596B /* Connection.m in Sources */,
+				3584E1CF0F332FA0008E596B /* ConnectionDelegate.m in Sources */,
+				3584E1D00F332FA0008E596B /* NSHTTPURLResponse+Error.m in Sources */,
+				3584E1D10F332FA0008E596B /* NSMutableURLRequest+ResponseType.m in Sources */,
+				3584E1D20F332FA0008E596B /* NSObject+ObjectiveResource.m in Sources */,
+				3584E1D30F332FA0008E596B /* ObjectiveResourceConfig.m in Sources */,
+				3584E1D40F332FA0008E596B /* Response.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
