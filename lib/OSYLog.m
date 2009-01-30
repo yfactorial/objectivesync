@@ -12,14 +12,20 @@ static NSString *CREATE = @"CREATE";
 
 @implementation OSYLog
 
-@synthesize loggedClassName, loggedPk, loggedAction;
+@synthesize loggedClassName, loggedPk, loggedAction, loggedAt;
+
++(NSArray *)newlyCreated {
+	NSString *query = [NSString stringWithFormat:@"WHERE logged_action = '%@'", CREATE];
+	return [self findByCriteria:query];;
+}
 
 +(void)logToDBWithCreatedClass:(Class) createdClass andPk:(int) createdPk {
-	OSYLog *result = [[[OSYLog alloc] init] autorelease];
-	result.loggedAction = CREATE;
-	result.loggedClassName = [createdClass className];
-	result.loggedPk = createdPk;
-	[result save];
+	OSYLog *log = [[[OSYLog alloc] init] autorelease];
+	log.loggedAction = CREATE;
+	log.loggedClassName = [createdClass className];
+	log.loggedPk = createdPk;
+	log.loggedAt = [NSDate date];
+	[log save];
 }
 
 #pragma mark cleanup
@@ -27,6 +33,7 @@ static NSString *CREATE = @"CREATE";
 {
 	[loggedClassName release];
 	[loggedAction release];
+	[loggedAt release];
 	[super dealloc];
 }
 

@@ -9,8 +9,8 @@
 #import "OSYService.h"
 #import "OSYDataChangedDelegate.h"
 #import "SQLitePersistentObject.h"
-#import "OSYLog.h"
-#import "NSObject+ObjectiveResource.h"
+#import "OSYSync.h"
+
 
 static OSYService *__instance;
 
@@ -29,13 +29,9 @@ static OSYService *__instance;
 
 -(void)dataChanged {
 	NSLog(@"data changed");
-	NSArray *changed = [OSYLog findByCriteria:@""];
-	for (OSYLog *log in changed) {
-		Class cls = [[NSBundle mainBundle] classNamed:log.loggedClassName];
-		id obj = [cls findByPK:log.loggedPk];
-		[obj saveORS];
-		NSLog(@"found: %@:%d, %@",log.loggedClassName, log.loggedPk, log.loggedAction);
-	}
+	//basic, sync immediately strategy
+	OSYSync *sync = [[[OSYSync alloc] init] autorelease];
+	[sync runSync];
 }
 
 @end
