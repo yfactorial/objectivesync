@@ -240,7 +240,7 @@ static id<ORCDataChangedDelegate>__delegate;
 
 	[[SQLiteInstanceManager sharedManager] executeQuery:updateSQL substitutions:substitutions];
 	if (isNew) {
-		[__delegate objectOfClass:self.class createdWithPk:pk];
+		[__delegate objectOfClass:self.class withPk:pk was:CreatedAction];
 	}
 
 }

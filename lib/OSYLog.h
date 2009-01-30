@@ -13,18 +13,18 @@
 
 	NSString *loggedClassName;
 	int loggedPk;
-	NSString *loggedAction;
+	int loggedAction;
 	NSDate *loggedAt;
 	
 }
 
 @property(nonatomic, retain) NSString *loggedClassName;
 @property(nonatomic) int loggedPk;
-@property(nonatomic, retain) NSString *loggedAction;
+@property(nonatomic) int loggedAction;
 @property(nonatomic, retain) NSDate *loggedAt;
 
 /*! log an object creation */
-+(void) logToDBWithCreatedClass:(Class) createdClass andPk:(int) createdPk;
++(void) logAction:(ORCActionTypes)action toDBWithClass:(Class)createdClass andPk:(int)createdPk;
 
 /*! findAll newly created objects that have not yet been uploaded */
 +(NSArray *)newlyCreated;

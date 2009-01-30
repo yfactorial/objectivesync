@@ -7,32 +7,32 @@
 //
 
 #import "OSYLog.h"
+#import "ORCDataChangedDelegate.h"
 
-static NSString *CREATE = @"CREATE";
 
 @implementation OSYLog
 
 @synthesize loggedClassName, loggedPk, loggedAction, loggedAt;
 
 +(NSArray *)newlyCreated {
-	NSString *query = [NSString stringWithFormat:@"WHERE logged_action = '%@'", CREATE];
+	NSString *query = [NSString stringWithFormat:@"WHERE logged_action = '%d'", CreatedAction];
 	return [self findByCriteria:query];;
 }
 
-+(void)logToDBWithCreatedClass:(Class) createdClass andPk:(int) createdPk {
++(void) logAction:(ORCActionTypes)action toDBWithClass:(Class)createdClass andPk:(int)createdPk {
 	OSYLog *log = [[[OSYLog alloc] init] autorelease];
-	log.loggedAction = CREATE;
+	log.loggedAction = action;
 	log.loggedClassName = [createdClass className];
 	log.loggedPk = createdPk;
 	log.loggedAt = [NSDate date];
 	[log save];
 }
 
+
 #pragma mark cleanup
 - (void) dealloc
 {
 	[loggedClassName release];
-	[loggedAction release];
 	[loggedAt release];
 	[super dealloc];
 }
